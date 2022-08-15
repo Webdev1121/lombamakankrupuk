@@ -16,7 +16,7 @@ var interval = setInterval(function() {
     // Display 'counter' wherever you want to display it.
     if (counter <= 0) {
      		clearInterval(interval);
-                alert("Game Over! Skor : ",go);
+                alert("Game Over!");
                 window.location.href = "/"
         return;
     }else{
@@ -59,7 +59,14 @@ function go(x){
 <body>
     <div class="items-center justify-center text-white text-center p-13 px-6 py-6 m-8 mx-14 mt-16">
         <h1 class="text-6xl font-extrabold">Lomba Mangan Krupuk Onlen</h1>
-        <p class="text-2xl font-bold ">Skor : <div id="movingbutton"></div></p>
+        <p class="text-2xl font-bold ">Skor : </p>
+  <div id="tag">
+  +100  
+  </div>
+  <div id="score">
+    0
+  </div>
+</div>
         <div>
 <style>
 #score {
@@ -87,22 +94,13 @@ function go(x){
   line-height: 70px;
 }
 </style>
+<p class="text-2xl font-extrabold">Waktu : </p>
   <span id="timer">
     <span id="time">10 </span>Detik      
   </span>
 </div>
 <img onClick="go(100);" class="button items-center justify-center flex" id="movingbutton" width="250" height="250" draggable="false" src="./palembang-removebg-preview.png">
-<div id="center">
-  <div id="title">
-    Skor : 
-  </div>
-  <div id="tag">
-  +100  
-  </div>
-  <div id="score">
-    0
-  </div>
-</div>
+
         
         
     </div>
