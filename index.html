@@ -8,15 +8,7 @@
     <script src="https://cdn.tailwindcss.com/"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-                       (function() {
-                       var score = 0;
-                       var phone = document.getElementById("movingbutton");
-                       phone.onclick=function(){
-                           score++;
-                           output = document.getElementById("score");
-                           output.innerHTML = score;
-                       };
-                   })();
+                       
 
                    var counter = 10;
 var interval = setInterval(function() {
@@ -32,6 +24,18 @@ var interval = setInterval(function() {
       console.log("Timer --> " + counter);
     }
 }, 1000);
+
+
+(function() {
+                       var score = 0;
+                       var phone = document.getElementById("movingbutton");
+                       phone.onclick=function(){
+                           score++;
+                           output = document.getElementById("score");
+                           output.innerHTML = score;
+                       };
+                   })();
+
     </script>
 </head>
 <body>
