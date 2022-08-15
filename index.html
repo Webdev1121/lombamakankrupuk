@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-red-700">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManganKrupuk Onlen</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+                       var score = 0;
+                       var phone = document.getElementById("btn");
+                       phone.onclick=function(){
+                           score++;
+                           output = document.getElementById("score");
+                           output.innerHTML = score;
+                       };
+                   
+                
+                   var timeLeft = 30;
+var elem = document.getElementById('timer');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem.innerHTML = timeLeft + ' Detik';
+        timeLeft--;
+    }
+}
+
+function doSomething() {
+    alert("Waktu Habis! Skor : ", score,);
+    window.location.href = "/"
+}
+    </script>
+</head>
+<body>
+    <div class="items-center justify-center text-white text-center p-13 px-6 py-6 m-8 mx-14 mt-16">
+        <h1 class="text-6xl font-extrabold">Lomba Mangan Krupuk Onlen</h1>
+        <p class="text-2xl font-bold ">Skor : <div id="score"></div></p>
+        <p class="text-2xl font-bold ">Timer : <div id="timer"></div></p>
+        
+        <button><img src="./krupuk.png" alt="kerupuk" id="btn"></button>
+    </div>
+</body>
+</html>
