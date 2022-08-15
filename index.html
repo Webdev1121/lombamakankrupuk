@@ -9,12 +9,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
 
-var score = 0;
-
-                   function add() {
-    score = score + 5;
-
-    };
+(function() {
+                       var score = 0;
+                       var phone = document.getElementById("movingbutton");
+                       phone.onclick=function(){
+                           score++;
+                           output = document.getElementById("score");
+                           output.innerHTML = score;
+                       };
+                   })()
                    var counter = 10;
 var interval = setInterval(function() {
     counter--;
@@ -34,7 +37,7 @@ var interval = setInterval(function() {
 <body>
     <div class="items-center justify-center text-white text-center p-13 px-6 py-6 m-8 mx-14 mt-16">
         <h1 class="text-6xl font-extrabold">Lomba Mangan Krupuk Onlen</h1>
-        <p class="text-2xl font-bold "><script>document.write("Skor : ",score ");</script</p>
+        <p class="text-2xl font-bold ">Skor : <div id="movingbutton"></div></p>
         <div>
   <span id="timer">
     <span id="time">10</span>Detik      
@@ -42,7 +45,7 @@ var interval = setInterval(function() {
 </div>
 
         
-        <img src="./palembang-removebg-preview.png" alt="kerupuk" onclick="add()">
+        <img src="./palembang-removebg-preview.png" alt="kerupuk" id="movingbutton">
     </div>
 </body>
 </html>
