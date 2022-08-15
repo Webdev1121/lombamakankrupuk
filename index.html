@@ -15,33 +15,32 @@
                            output = document.getElementById("score");
                            output.innerHTML = score;
                        };
-                   
-                
-                   var timeLeft = 30;
-var elem = document.getElementById('timer');
-var timerId = setInterval(countdown, 1000);
-
-function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-        elem.innerHTML = timeLeft + ' Detik';
-        timeLeft--;
+                   var counter = 60;
+var interval = setInterval(function() {
+    counter--;
+    // Display 'counter' wherever you want to display it.
+    if (counter <= 0) {
+     		clearInterval(interval);
+                alert("Game Over! Skor : ",score);
+                window.location.href = "/"
+        return;
+    }else{
+    	$('#time').text(counter);
+      console.log("Timer --> " + counter);
     }
-}
-
-function doSomething() {
-    alert("Waktu Habis! Skor : ", score,);
-    window.location.href = "/"
-}
+}, 1000);
     </script>
 </head>
 <body>
     <div class="items-center justify-center text-white text-center p-13 px-6 py-6 m-8 mx-14 mt-16">
         <h1 class="text-6xl font-extrabold">Lomba Mangan Krupuk Onlen</h1>
         <p class="text-2xl font-bold ">Skor : <div id="score"></div></p>
-        <p class="text-2xl font-bold ">Timer : <div id="timer"></div></p>
+        <div>
+  <span id="timer">
+    <span id="time">60</span>Detik      
+  </span>
+</div>
+
         
         <button><img src="./krupuk.png" alt="kerupuk" id="btn"></button>
     </div>
