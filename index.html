@@ -16,7 +16,7 @@ var interval = setInterval(function() {
     // Display 'counter' wherever you want to display it.
     if (counter <= 0) {
      		clearInterval(interval);
-        document.write('<center>Game Over! Skor : <div id="score"></div><a href="/"><button class="p-14 px-4 py-8 bg-gray-200 text-white rounded-full">Main Lagi?</button></a></center>');
+        document.write('<script src="https://cdn.tailwindcss.com/" /><center>Game Over! Skor : <div id="score"></div><a href="/"><button class="p-14 px-4 py-8 bg-gray-200 text-white rounded-full">Main Lagi?</button></a></center>');
         return;
     }else{
     	$('#time').text(counter);
