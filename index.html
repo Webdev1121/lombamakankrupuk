@@ -16,7 +16,7 @@ var interval = setInterval(function() {
     // Display 'counter' wherever you want to display it.
     if (counter <= 0) {
      		clearInterval(interval);
-                alert("Game Over!");
+        document.write('Skor : <div id="score"></div>');
                 window.location.href = "/"
         return;
     }else{
