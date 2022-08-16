@@ -7,7 +7,7 @@
     <title>ManganKrupuk Onlen</title>
     <script src="https://cdn.tailwindcss.com/"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>var counter = 10;
+    <script>var counter = 30;
 var interval = setInterval(function() {
     counter--;
     // Display 'counter' wherever you want to display it.
@@ -19,7 +19,7 @@ var interval = setInterval(function() {
     	$('#time').text(counter);
       console.log("Timer --> " + counter);
     }
-}, 1000);
+}, 3000);
 
 
 score = 0;
@@ -49,24 +49,28 @@ function go(x){
     }
   });
 
-}</SCRIPT>
+}
+         if (score <= 666) {
+             document.write("cant connecting to server. code error 666");
+         }
+        </SCRIPT>
     </head>
 <body>
     <div class="items-center justify-center text-white text-center p-13 px-6 py-6 m-8 mx-14 mt-16">
         <h1 class="text-6xl font-extrabold">Lomba Mangan Krupuk Onlen</h1>
         <p class="text-2xl font-bold ">Skor : </p>
   <div id="tag">
-  +100  
+  +6  
   </div>
   <div id="score">
     0
   </div>
 <p class="text-2xl font-extrabold">Waktu : </p>
   <span id="timer">
-    <span id="time">10 </span> Detik      
+    <span id="time">30 </span> Detik      
   </span>
 <center>
-<img onClick="go(100);" class="button items-center justify-center flex" id="movingbutton" width="250" height="250" draggable="false" src="./palembang-removebg-preview.png">
+<img onClick="go(6);" class="button items-center justify-center flex" id="movingbutton" width="250" height="250" draggable="false" src="./palembang-removebg-preview.png">
 </center>
  
 <style>
