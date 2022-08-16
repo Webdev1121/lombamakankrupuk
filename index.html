@@ -16,8 +16,7 @@ var interval = setInterval(function() {
     // Display 'counter' wherever you want to display it.
     if (counter <= 0) {
      		clearInterval(interval);
-        document.write('Skor : <div id="score"></div>');
-                window.location.href = "/"
+        document.write('<center>Game Over! Skor : <div id="score"></div></center>');
         return;
     }else{
     	$('#time').text(counter);
